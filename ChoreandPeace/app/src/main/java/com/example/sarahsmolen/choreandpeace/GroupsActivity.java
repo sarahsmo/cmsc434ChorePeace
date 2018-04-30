@@ -30,12 +30,9 @@ public class GroupsActivity extends AppCompatActivity {
                     Intent i3 = new Intent(GroupsActivity.this, NewChore.class);
                     startActivity(i3);
                     return true;
-                case R.id.navigation_list:
-                    Context context = getApplicationContext();
-                    CharSequence text = "This feature is currently unavailable";
-                    int duration = Toast.LENGTH_LONG;
-                    Toast toast = Toast.makeText(context, text, duration);
-                    toast.show();
+                case R.id.navigation_home:
+                    Intent i5 = new Intent(GroupsActivity.this, DefaultHome.class);
+                    startActivity(i5);
                     return true;
                 case R.id.navigation_groups:
                     Intent i4 = new Intent(GroupsActivity.this, GroupsActivity.class);
