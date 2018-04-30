@@ -2,6 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/groupSelect"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GroupsActivity">
@@ -11,17 +12,113 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="Groups"
             android:textSize="35sp" />
 
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="264dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Groups you are in, click to edit:"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="47dp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DefaultHome">
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/windowBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/navigation" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="242dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+ Add New Group"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="318dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Group"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="385dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="385dp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="114dp">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="124dp"
+            android:layout_height="39dp"
+            android:layout_weight="1"
+            android:text="Apartment"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="108dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="127dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:text="House"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="147dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="My Chores"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="185dp" />
+
+    </RadioGroup>
 
 
 </android.support.constraint.ConstraintLayout>
