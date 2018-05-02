@@ -6,69 +6,141 @@
     android:layout_height="match_parent"
     tools:context=".NewChore">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/NewChore"
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Chore"
-            android:textSize="35sp" />
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <android.support.design.widget.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Name" />
-        </android.support.design.widget.TextInputLayout>
-
-        <EditText
-            android:id="@+id/DateField"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="date"
-            android:hint="Date"/>
-
-        <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:drawable/btn_dropdown"
-            android:spinnerMode="dropdown"/>
-
-        <TextView
-            android:id="@+id/AssignTo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="17sp"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
-            android:text="Assign To:" />
-
+        android:layout_height="match_parent">
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/customborder">
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
+                android:id="@+id/NewChore"
+                android:gravity="center"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_marginBottom = "10dp"
+                android:text="New Chore"
+                android:textSize="35sp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Name of Chore" />
+            </android.support.design.widget.TextInputLayout>
+
+            <EditText
+                android:id="@+id/DateField"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="date"
+                android:hint="Chore Due Date: MM/DD/YYYY"/>
+
+            <TextView
+                android:id="@+id/Frequency"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="17sp"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:paddingLeft="5sp"
+                android:text="Frequency of Chore:" />
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"/>
+
+            <TextView
+                android:id="@+id/AssignTo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="17sp"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:paddingLeft="5sp"
+                android:text="Assign To:" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/customborder">
+
+                <TextView
+                    android:id="@+id/assignGroups"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Groups:" />
+
+                <CheckBox
+                    android:id="@+id/checkBox1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Home" />
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Apartment 461" />
+
+                <TextView
+                    android:id="@+id/assignPeople"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="People:" />
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Sarah" />
+                <CheckBox
+                    android:id="@+id/checkBox4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Matt" />
+                <CheckBox
+                    android:id="@+id/checkBox5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Kira" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/SaveChoreBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop = "10dp"
+                android:layout_marginBottom = "10dp"
+                android:text="Save"
+                android:background="@android:color/holo_green_light"/>
+
+            <TextView
+                android:id="@+id/extraSpace"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="17sp"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:text="" />
+            <TextView
+                android:id="@+id/extraSpace2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="17sp"
+                android:paddingTop="5sp"
+                android:paddingBottom="5sp"
+                android:text="" />
+
         </LinearLayout>
-
-
-    </LinearLayout>
+    </ScrollView>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
@@ -80,6 +152,5 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/navigation" />
-
 
 </android.support.constraint.ConstraintLayout>

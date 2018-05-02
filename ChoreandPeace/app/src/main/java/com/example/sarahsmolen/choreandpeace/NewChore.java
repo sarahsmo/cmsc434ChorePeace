@@ -9,7 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import java.lang.reflect.Field;
@@ -88,5 +90,15 @@ public class NewChore extends AppCompatActivity {
         disableShiftMode(navigation);
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+
+        Button button = (Button) findViewById(R.id.SaveChoreBtn);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent i5 = new Intent(NewChore.this, DefaultHome.class);
+                startActivity(i5);
+            }
+        });
+
     }
 }
