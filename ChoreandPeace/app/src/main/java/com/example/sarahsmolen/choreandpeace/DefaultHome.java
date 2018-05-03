@@ -1,6 +1,5 @@
 package com.example.sarahsmolen.choreandpeace;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,12 +9,14 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.widget.CalendarView;
 import android.widget.Toast;
 
 import java.lang.reflect.Field;
 
 public class DefaultHome extends AppCompatActivity {
+
+    private CalendarView mCalendarView;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -74,10 +75,18 @@ public class DefaultHome extends AppCompatActivity {
         setContentView(R.layout.activity_default_home);
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-
         disableShiftMode(navigation);
-
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-    }
 
+        mCalendarView = (CalendarView) findViewById(R.id.calendarView);
+        mCalendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+                String date = month + "/" + dayOfMonth + "/" + year;
+                Toast toast = Toast.makeText(getApplicationContext(), date, Toast.LENGTH_LONG);
+                toast.show();
+            }
+        });
+
+    }
 }
