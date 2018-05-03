@@ -132,15 +132,16 @@
         </LinearLayout>
 
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/addPerson"
+            android:layout_width="206dp"
+            android:layout_height="wrap_content"
+            android:text=" + Add a person"
+            tools:layout_editor_absoluteX="89dp"
+            tools:layout_editor_absoluteY="265dp" />
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="206dp"
-        android:layout_height="wrap_content"
-        android:text=" + Add a person"
-        tools:layout_editor_absoluteX="89dp"
-        tools:layout_editor_absoluteY="265dp" />
+
+    </LinearLayout>
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/container"
