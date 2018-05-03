@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.lang.reflect.Field;
@@ -42,6 +44,7 @@ public class GroupsActivity extends AppCompatActivity {
                     Intent i2 = new Intent(GroupsActivity.this, SettingsActivity.class);
                     startActivity(i2);
                     return true;
+
             }
             return false;
         }
@@ -73,11 +76,29 @@ public class GroupsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_groups);
 
+        // This button is selected when the user wants to edit the selected group
+        final Button editButton = findViewById(R.id.editGroup);
+        editButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // When edit button is clicked, go the the EditGroup Page
+                startActivity(new Intent(GroupsActivity.this, EditGroup.class));
+            }
+        });
+
+
+
+
+
+
+
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
 
         disableShiftMode(navigation);
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
 
 
     }
