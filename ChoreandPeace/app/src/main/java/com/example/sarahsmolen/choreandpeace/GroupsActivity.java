@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.lang.reflect.Field;
@@ -85,13 +86,6 @@ public class GroupsActivity extends AppCompatActivity {
                 startActivity(new Intent(GroupsActivity.this, EditGroup.class));
             }
         });
-
-
-
-
-
-
-
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
 

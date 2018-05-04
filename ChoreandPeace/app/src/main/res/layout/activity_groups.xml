@@ -24,48 +24,42 @@
 
 
 
-        <EditText
+        <TextView
             android:id="@+id/editText"
-            android:layout_width="264dp"
-            android:layout_height="50dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Groups you are in, click to edit:"
-            tools:layout_editor_absoluteX="60dp"
-            tools:layout_editor_absoluteY="47dp" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="25sp"
+            android:text="Select a group to edit:" />
 
         <RadioGroup
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="129dp"
-            tools:layout_editor_absoluteY="114dp">
+            android:layout_height="wrap_content">
 
             <RadioButton
                 android:id="@+id/aptRadioButton"
-                android:layout_width="124dp"
-                android:layout_height="39dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
                 android:layout_weight="1"
-                android:text="Apartment"
-                tools:layout_editor_absoluteX="74dp"
-                tools:layout_editor_absoluteY="108dp" />
+                android:text="Apartment 461" />
 
             <RadioButton
                 android:id="@+id/houseRadioButton"
-                android:layout_width="127dp"
-                android:layout_height="38dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
                 android:layout_weight="1"
-                android:text="House"
-                tools:layout_editor_absoluteX="74dp"
-                tools:layout_editor_absoluteY="147dp" />
+                android:text="House" />
 
             <RadioButton
                 android:id="@+id/myChoresRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="25sp"
                 android:layout_weight="1"
-                android:text="My Chores"
-                tools:layout_editor_absoluteX="74dp"
-                tools:layout_editor_absoluteY="185dp" />
+                android:text="My Chores" />
 
         </RadioGroup>
 
@@ -73,25 +67,17 @@
             android:id="@+id/editGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Edit"
-            tools:layout_editor_absoluteX="147dp"
-            tools:layout_editor_absoluteY="242dp" />
+            android:layout_marginTop="20dp"
+            android:textSize="25sp"
+            android:text="Edit" />
 
         <Button
             android:id="@+id/addNewGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+ Add New Group"
-            tools:layout_editor_absoluteX="119dp"
-            tools:layout_editor_absoluteY="318dp" />
-
-        <Button
-            android:id="@+id/saveGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save"
-            tools:layout_editor_absoluteX="234dp"
-            tools:layout_editor_absoluteY="385dp" />
+            android:layout_marginTop="20dp"
+            android:textSize="25sp"
+            android:text="+ Add New Group" />
 
     </LinearLayout>
 
@@ -99,9 +85,7 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".DefaultHome"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="37dp">
+        tools:context=".DefaultHome">
 
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/navigation"

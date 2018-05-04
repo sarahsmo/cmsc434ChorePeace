@@ -1,5 +1,6 @@
 package com.example.sarahsmolen.choreandpeace;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationItemView;
@@ -95,8 +96,10 @@ public class NewChore extends AppCompatActivity {
         Button button = (Button) findViewById(R.id.SaveChoreBtn);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent i5 = new Intent(NewChore.this, DefaultHome.class);
-                startActivity(i5);
+                Intent returnIntent = new Intent();
+                returnIntent.putExtra("result", "saved");
+                setResult(Activity.RESULT_OK,returnIntent);
+                finish();
             }
         });
 
