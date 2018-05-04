@@ -18,71 +18,90 @@
             android:layout_width="match_parent"
             android:layout_height="306dp" />
 
-        <TextView
-            android:id="@+id/Upcoming"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="17sp"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
-            android:paddingLeft="5sp"
-            android:text="Your Chores (click to complete)" />
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/Upcoming"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="17sp"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:paddingLeft="5sp"
+                    android:text="Your Chores (click to complete)" />
 
-        <TextView
-            android:id="@+id/chore1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
-            android:paddingLeft="25sp"
-            android:textSize="17sp"
-            android:text="Clean Shower due 5/16"
-            android:clickable="true"
-            />
-        <TextView
-            android:id="@+id/chore2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
-            android:paddingLeft="25sp"
-            android:textSize="17sp"
-            android:text="Take out Trash due 5/19"
-            android:clickable="true"
-            />
-        <TextView
-            android:id="@+id/chore3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
-            android:paddingLeft="25sp"
-            android:textSize="17sp"
-            android:text="Sweep Kitchen Floors due 5/22"
-            android:clickable="true"
-            />
-        <TextView
-            android:id="@+id/chore4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
-            android:paddingLeft="25sp"
-            android:textSize="17sp"
-            android:text="Wash Dishes due 5/22"
-            android:clickable="true"
-            />
-        <TextView
-            android:id="@+id/chore5"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingTop="5sp"
-            android:paddingBottom="5sp"
-            android:paddingLeft="25sp"
-            android:textSize="17sp"
-            android:text="Clean Toilet due 5/25"
-            android:clickable="true"
-            />
+                <TextView
+                    android:id="@+id/chore1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:paddingLeft="25sp"
+                    android:textSize="17sp"
+                    android:text="Clean Shower due 5/16"
+                    android:clickable="true"
+                    />
+                <TextView
+                    android:id="@+id/chore2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:paddingLeft="25sp"
+                    android:textSize="17sp"
+                    android:text="Take out Trash due 5/19"
+                    android:clickable="true"
+                    />
+                <TextView
+                    android:id="@+id/chore3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:paddingLeft="25sp"
+                    android:textSize="17sp"
+                    android:text="Sweep Kitchen Floors due 5/22"
+                    android:clickable="true"
+                    />
+                <TextView
+                    android:id="@+id/chore4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:paddingLeft="25sp"
+                    android:textSize="17sp"
+                    android:text="Wash Dishes due 5/22"
+                    android:clickable="true"
+                    />
+                <TextView
+                    android:id="@+id/chore5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:paddingLeft="25sp"
+                    android:textSize="17sp"
+                    android:text="Clean Toilet due 5/25"
+                    android:clickable="true"
+                    />
+                <TextView
+                    android:id="@+id/filler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="5sp"
+                    android:paddingBottom="5sp"
+                    android:paddingLeft="25sp"
+                    android:textSize="20sp"
+                    android:text="  "
+                    />
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
 
