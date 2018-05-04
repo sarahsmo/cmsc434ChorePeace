@@ -1,5 +1,6 @@
 package com.example.sarahsmolen.choreandpeace;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
@@ -13,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.lang.reflect.Field;
 
@@ -70,6 +72,22 @@ public class EditGroup extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        TextView view = (TextView)findViewById(R.id.textViewNick);
+
+        Button btn = findViewById(R.id.button4);
+
+        if (requestCode == 1) {
+            if(resultCode == Activity.RESULT_OK){
+                view.setVisibility(View.VISIBLE);
+                btn.setVisibility(View.VISIBLE);
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+                //Write your code if there's no result
+            }
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +97,20 @@ public class EditGroup extends AppCompatActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         disableShiftMode(navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        TextView view = (TextView)findViewById(R.id.textViewNick);
+        view.setVisibility(View.INVISIBLE);
+        Button btn = findViewById(R.id.button4);
+        btn.setVisibility(View.INVISIBLE);
+
+        Button button = (Button) findViewById(R.id.SaveGroupBtn);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent i4 = new Intent(EditGroup.this, GroupsActivity.class);
+                startActivity(i4);
+            }
+        });
+
 
         final Button addPersonButton = findViewById(R.id.addPerson);
         addPersonButton.setOnClickListener(new OnClickListener() {

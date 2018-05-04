@@ -37,6 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginTop="20dp"
                 android:text="  Group Name:  "
                 android:textSize="25sp" />
 
@@ -45,7 +46,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="  Apartment  "
+                android:layout_marginTop="20dp"
+                android:text="Apartment 461  "
                 android:textSize="25sp" />
         </LinearLayout>
 
@@ -58,9 +60,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:paddingTop="9pt"
+            android:paddingTop="15pt"
+            android:paddingBottom="8pt"
             android:text="People In Group"
-            android:textSize="24sp" />
+            android:textSize="25sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -75,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Patrick Star"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/button3"
@@ -87,7 +90,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="39dp"
+            android:layout_height="35dp"
             android:orientation="horizontal"
             android:paddingLeft="30dp"
             android:paddingRight="30dp">
@@ -98,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Ash Ketchum"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/button"
@@ -110,18 +113,18 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="41dp"
+            android:layout_height="35dp"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView15"
-                android:layout_width="159dp"
+                android:layout_width="158dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Peter Griffin"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/button2"
@@ -131,14 +134,45 @@
                 android:text="Delete" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewNick"
+                android:layout_width="158dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nick Wolf"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Delete" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/addPerson"
-            android:layout_width="206dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" + Add a person"
-            tools:layout_editor_absoluteX="89dp"
-            tools:layout_editor_absoluteY="265dp" />
+
+            />
+
+        <Button
+            android:id="@+id/SaveGroupBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop = "10dp"
+            android:layout_marginBottom = "10dp"
+            android:text="Save"
+            android:background="@android:color/holo_green_light"/>
 
 
     </LinearLayout>
@@ -168,7 +202,7 @@
 
     </android.support.constraint.ConstraintLayout>
 
-    
+
 
 </android.support.constraint.ConstraintLayout>
 
